@@ -65,6 +65,24 @@ namespace ServiceSparePartAstra.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Employees",
+                columns: table => new
+                {
+                    EmployeeID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    EmployeeName = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    Marital = table.Column<string>(nullable: false),
+                    PhoneNumber = table.Column<int>(nullable: false),
+                    Sex = table.Column<int>(nullable: false),
+                    Tax = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Employees", x => x.EmployeeID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -229,6 +247,9 @@ namespace ServiceSparePartAstra.Migrations
 
             migrationBuilder.DropTable(
                 name: "Customers");
+
+            migrationBuilder.DropTable(
+                name: "Employees");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

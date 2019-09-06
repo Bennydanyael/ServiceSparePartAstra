@@ -9,8 +9,11 @@
 }
 else
 {
-    <ul class="nav navbar-nav">
-        <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
-        <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
-    </ul>
+<ul class="nav navbar-nav navbar-right">
+    <li>   
+        <a asp-area="Identity" asp-page="/Account/Register">
+        <i class="glyphicon glyphicon-user"></i> Register</a>
+    </li>
+    <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+</ul>
 }

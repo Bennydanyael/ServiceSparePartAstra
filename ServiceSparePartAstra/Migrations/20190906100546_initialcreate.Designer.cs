@@ -10,7 +10,7 @@ using ServiceSparePartAstra.Models;
 namespace ServiceSparePartAstra.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20190906093918_initialcreate")]
+    [Migration("20190906100546_initialcreate")]
     partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -209,6 +209,32 @@ namespace ServiceSparePartAstra.Migrations
                     b.HasKey("CustomerID");
 
                     b.ToTable("Customers");
+                });
+
+            modelBuilder.Entity("ServiceSparePartAstra.Models.Employee", b =>
+                {
+                    b.Property<int>("EmployeeID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.Property<string>("EmployeeName")
+                        .IsRequired();
+
+                    b.Property<string>("Marital")
+                        .IsRequired();
+
+                    b.Property<int>("PhoneNumber");
+
+                    b.Property<int>("Sex");
+
+                    b.Property<int>("Tax");
+
+                    b.HasKey("EmployeeID");
+
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

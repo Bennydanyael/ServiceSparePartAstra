@@ -209,6 +209,32 @@ namespace ServiceSparePartAstra.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("ServiceSparePartAstra.Models.Employee", b =>
+                {
+                    b.Property<int>("EmployeeID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.Property<string>("EmployeeName")
+                        .IsRequired();
+
+                    b.Property<string>("Marital")
+                        .IsRequired();
+
+                    b.Property<int>("PhoneNumber");
+
+                    b.Property<int>("Sex");
+
+                    b.Property<int>("Tax");
+
+                    b.HasKey("EmployeeID");
+
+                    b.ToTable("Employees");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
