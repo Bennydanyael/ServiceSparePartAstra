@@ -1,0 +1,27 @@
+﻿<div style="width: 500px">
+
+    <ej-tab id="tabSample">
+        <e-tab-items>
+            <e-tab-item id="Pizza" text="Pizza Menu">
+                <e-content-template></e-content-template>
+            </e-tab-item>
+            <e-tab-item id="Pasta" text="Pasta Menu">
+                <e-content-template></e-content-template>
+            </e-tab-item>
+            <e-tab-item id="Sandwich" text="Sandwich Menu">
+                <e-content-template></e-content-template>
+            </e-tab-item>
+        </e-tab-items>
+    </ej-tab>
+
+</div>
+
+/*Razor code to render Tab*/
+
+@{ Html.EJ().Tab("DishType").Items(data =>
+     {
+         data.Add().ID("pizza").Text("Pizza Menu").ContentTemplate(@<div></div>);
+data.Add().ID("type").Text("Pizza Type").ContentTemplate(@<div></div>);
+data.Add().ID("sandwich").Text("Sandwich Type").ContentTemplate(@<div></div>);
+}).Render();
+}
