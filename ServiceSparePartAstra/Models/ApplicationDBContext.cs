@@ -14,11 +14,11 @@ namespace ServiceSparePartAstra.Models
         }
 
         public DbSet<Customers> Customers { get; set; }
-        public DbSet<TransaksiKasKecil> TransaksiKasKecil { get; set; }
-        public DbSet<TransaksiKasBesar> TransaksiKasBesar { get; set; }
-        public DbSet<PelunasanServiceKasKecil> PelunasanServiceKasKecil { get; set; }
-        public DbSet<PelunasanServiceKasBesar> PelunasanServiceKasBesar { get; set; }
-        public DbSet<PelunasanPartsKasKecil> PelunasanPartsKasKecils { get; set; }
-        public DbSet<PelunasanPartsKasBesar> PelunasanPartsKasBesar { get; set; }
+        //public DbSet<TransaksiKasKecil> TransaksiKasKecil { get; set; }
+        //public DbSet<TransaksiKasBesar> TransaksiKasBesar { get; set; }
+        //public DbSet<PelunasanServiceKasKecil> PelunasanServiceKasKecil { get; set; }
+        //public DbSet<PelunasanServiceKasBesar> PelunasanServiceKasBesar { get; set; }
+        //public DbSet<PelunasanPartsKasKecil> PelunasanPartsKasKecils { get; set; }
+        //public DbSet<PelunasanPartsKasBesar> PelunasanPartsKasBesar { get; set; }
     }
 }
