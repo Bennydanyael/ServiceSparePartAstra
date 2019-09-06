@@ -1,17 +1,11 @@
 ﻿@model ServiceSparePartAstra.Models.Customers
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
+<h2>Create</h2>
 
 <h4>Customers</h4>
 <hr />
@@ -55,5 +49,6 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-</body>
-</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

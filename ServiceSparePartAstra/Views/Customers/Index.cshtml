@@ -1,37 +1,32 @@
 ﻿@model IEnumerable<ServiceSparePartAstra.Models.Customers>
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+<h2>Index</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CustomerName)
+            <th><h3>Nama</h3>
+                @*@Html.DisplayNameFor(model => model.CustomerName)*@
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CustomerEmail)
+            <th> <h3>Email</h3>
+                @*@Html.DisplayNameFor(model => model.CustomerEmail)*@
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CustomerPhoneNumber)
+            <th><h3>Phone Number</h3>
+                @*@Html.DisplayNameFor(model => model.CustomerPhoneNumber)*@
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CustomerAddress)
+            <th><h3>Address</h3>
+                @*@Html.DisplayNameFor(model => model.CustomerAddress)*@
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sex)
+            <th><h3>Sex</h3>
+                @*@Html.DisplayNameFor(model => model.Sex)*@
             </th>
             <th></th>
         </tr>
@@ -63,5 +58,3 @@
 }
     </tbody>
 </table>
-</body>
-</html>

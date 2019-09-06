@@ -60,8 +60,8 @@ namespace ServiceSparePartAstra
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute( "identity", "customer/{*details}",
-                    defaults : new {controller = "Customers", action = "Index"});
+                //routes.MapRoute( "identity", "customer/{*details}",
+                //    defaults : new {controller = "Customers", action = "Index"});
 
                 routes.MapRoute(
                     name: "default",
